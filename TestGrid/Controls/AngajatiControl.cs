@@ -22,7 +22,13 @@ namespace TestGrid
         {
             // TODO: This line of code loads data into the 'santierDataSet1.employees' table. You can move, or remove it, as needed.
             this.employeesTableAdapter.Fill(this.santierDataSet1.employees);
-
+            //this.radGridView1.AutoSizeColumnsMode = GridViewAutoSizeColumnsMode.Fill;
+            //this.radGridView1.Columns["FirstName"].Width = 100;
+            //this.radGridView1.Columns["LastName"].Width = 100;
+            //this.radGridView1.Columns["Title"].Width = 70;
+            //this.radGridView1.Columns["HireDate"].Width = 70;
+            //this.radGridView1.Columns["Address"].Width = 110;
+            //this.radGridView1.Columns["City"].Width = 110;
         }
 
         private void saveButton_Click(object sender, EventArgs e)

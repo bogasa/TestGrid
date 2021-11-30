@@ -37,7 +37,9 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -68,6 +70,18 @@
     <Compile Include="Controls\AngajatiControl.Designer.cs">
       <DependentUpon>AngajatiControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\PontajControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\PontajControl.Designer.cs">
+      <DependentUpon>PontajControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PlatiControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\PlatiControl.Designer.cs">
+      <DependentUpon>PlatiControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +93,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>santierDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="santierDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>santierDataSet1.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Controls\PontajControl.resx">
+      <DependentUpon>PontajControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PlatiControl.resx">
+      <DependentUpon>PlatiControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Controls\AngajatiControl.resx">
       <DependentUpon>AngajatiControl.cs</DependentUpon>
@@ -117,6 +142,17 @@
     </None>
     <None Include="santierDataSet.xss">
       <DependentUpon>santierDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="santierDataSet1.xsc">
+      <DependentUpon>santierDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="santierDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>santierDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="santierDataSet1.xss">
+      <DependentUpon>santierDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
