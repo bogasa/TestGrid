@@ -15,14 +15,14 @@ namespace TestGrid.Controls
         public PontajControl()
         {
             InitializeComponent();
+            radDateTimePicker1.DateTimePickerElement.Calendar.HeaderNavigationMode = Telerik.WinControls.UI.HeaderNavigationMode.Zoom;
+            radDateTimePicker1.DateTimePickerElement.Calendar.ZoomLevel = Telerik.WinControls.UI.ZoomLevel.Months;
         }
 
         private void RadForm1_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'santierDataSet.timesheets' table. You can move, or remove it, as needed.
             this.timesheetsTableAdapter.Fill(this.santierDataSet.timesheets);
-            // TODO: This line of code loads data into the 'santierDataSet.timesheets' table. You can move, or remove it, as needed.
-            //this.timesheetsTableAdapter.Fill(this.santierDataSet.timesheets);
 
         }
 

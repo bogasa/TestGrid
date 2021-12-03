@@ -14,6 +14,8 @@ namespace TestGrid.Controls
         public PlatiControl()
         {
             InitializeComponent();
+            radDateTimePicker1.DateTimePickerElement.Calendar.HeaderNavigationMode = Telerik.WinControls.UI.HeaderNavigationMode.Zoom;
+            radDateTimePicker1.DateTimePickerElement.Calendar.ZoomLevel = Telerik.WinControls.UI.ZoomLevel.Months;
         }
 
         private void PlatiControl_Load(object sender, EventArgs e)
