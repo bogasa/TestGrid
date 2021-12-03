@@ -46,7 +46,7 @@
             this.radPageView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radPageView1.Location = new System.Drawing.Point(0, 0);
             this.radPageView1.Name = "radPageView1";
-            this.radPageView1.SelectedPage = this.radPageViewPage1;
+            this.radPageView1.SelectedPage = this.radPageViewPage3;
             this.radPageView1.Size = new System.Drawing.Size(956, 596);
             this.radPageView1.TabIndex = 0;
             // 
@@ -64,7 +64,7 @@
             this.radPageViewPage2.ItemSize = new System.Drawing.SizeF(49F, 29F);
             this.radPageViewPage2.Location = new System.Drawing.Point(6, 36);
             this.radPageViewPage2.Name = "radPageViewPage2";
-            this.radPageViewPage2.Size = new System.Drawing.Size(944, 709);
+            this.radPageViewPage2.Size = new System.Drawing.Size(944, 554);
             this.radPageViewPage2.Text = "Pontaj";
             // 
             // radPageViewPage3
@@ -72,12 +72,12 @@
             this.radPageViewPage3.ItemSize = new System.Drawing.SizeF(38F, 29F);
             this.radPageViewPage3.Location = new System.Drawing.Point(6, 36);
             this.radPageViewPage3.Name = "radPageViewPage3";
-            this.radPageViewPage3.Size = new System.Drawing.Size(944, 709);
+            this.radPageViewPage3.Size = new System.Drawing.Size(944, 554);
             this.radPageViewPage3.Text = "Plati";
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(956, 596);
             this.Controls.Add(this.radPageView1);

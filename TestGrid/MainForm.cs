@@ -36,9 +36,6 @@ namespace TestGrid
             platiControl.Dock = DockStyle.Fill;
             platiControl.Show();
 
-            //radPageView1.Pages[0].Controls.Add(angajatiControl);
-            //angajatiControl.Dock = DockStyle.Fill;
-            //angajatiControl.Height = radPageView1.Pages[0].Height;
         }
     }
 }

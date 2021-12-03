@@ -40,11 +40,13 @@
             this.santierDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.santierDataSet = new TestGrid.santierDataSet();
             this.paymentsTableAdapter1 = new TestGrid.santierDataSetTableAdapters.PaymentsTableAdapter();
+            this.radDateTimePicker1 = new Telerik.WinControls.UI.RadDateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.santierDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.santierDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radDateTimePicker1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,11 +65,10 @@
             // 
             this.radGridView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.radGridView1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.radGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGridView1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.radGridView1.ForeColor = System.Drawing.Color.Black;
             this.radGridView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.radGridView1.Location = new System.Drawing.Point(0, 0);
+            this.radGridView1.Location = new System.Drawing.Point(0, 62);
             this.radGridView1.Margin = new System.Windows.Forms.Padding(4);
             // 
             // 
@@ -119,7 +120,7 @@
             this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.radGridView1.Name = "radGridView1";
             this.radGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.radGridView1.Size = new System.Drawing.Size(592, 368);
+            this.radGridView1.Size = new System.Drawing.Size(592, 307);
             this.radGridView1.TabIndex = 2;
             // 
             // santierDataSetBindingSource
@@ -136,12 +137,29 @@
             // 
             this.paymentsTableAdapter1.ClearBeforeFill = true;
             // 
+            // radDateTimePicker1
+            // 
+            this.radDateTimePicker1.CalendarSize = new System.Drawing.Size(290, 320);
+            this.radDateTimePicker1.Culture = new System.Globalization.CultureInfo("en-RO");
+            this.radDateTimePicker1.CustomFormat = "MMMM yyyy";
+            this.radDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.radDateTimePicker1.Location = new System.Drawing.Point(13, 13);
+            this.radDateTimePicker1.Name = "radDateTimePicker1";
+            this.radDateTimePicker1.Size = new System.Drawing.Size(205, 28);
+            this.radDateTimePicker1.TabIndex = 3;
+            this.radDateTimePicker1.TabStop = false;
+            this.radDateTimePicker1.Text = "December 2021";
+            this.radDateTimePicker1.Value = new System.DateTime(2021, 12, 2, 16, 37, 28, 514);
+            //this.radDateTimePicker1.DateTimePickerElement.Calendar.HeaderNavigationMode = Telerik.WinControls.UI.HeaderNavigationMode.Zoom;
+            //this.radDateTimePicker1.DateTimePickerElement.Calendar.ZoomLevel = Telerik.WinControls.UI.ZoomLevel.Months;
+            // 
             // PlatiControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(592, 404);
+            this.Controls.Add(this.radDateTimePicker1);
             this.Controls.Add(this.radGridView1);
             this.Controls.Add(this.radButton1);
             this.Name = "PlatiControl";
@@ -156,8 +174,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.santierDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.santierDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radDateTimePicker1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -167,5 +187,6 @@
         private System.Windows.Forms.BindingSource santierDataSetBindingSource;
         private santierDataSet santierDataSet;
         private santierDataSetTableAdapters.PaymentsTableAdapter paymentsTableAdapter1;
+        private Telerik.WinControls.UI.RadDateTimePicker radDateTimePicker1;
     }
 }

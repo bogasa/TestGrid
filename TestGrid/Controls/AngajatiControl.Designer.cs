@@ -56,6 +56,8 @@ namespace TestGrid
             // 
             this.radGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGridView1.Location = new System.Drawing.Point(0, 0);
+            this.radGridView1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.radGridView1.ForeColor = System.Drawing.Color.Black;
             // 
             // 
             // 
@@ -139,8 +141,8 @@ namespace TestGrid
             // AngajatiControl
             // 
             this.AccessibleName = "";
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            //this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(592, 404);
             this.Controls.Add(this.saveButton);
