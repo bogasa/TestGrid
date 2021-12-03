@@ -65,10 +65,11 @@
             // 
             this.radGridView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.radGridView1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.radGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radGridView1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.radGridView1.ForeColor = System.Drawing.Color.Black;
             this.radGridView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.radGridView1.Location = new System.Drawing.Point(0, 62);
+            this.radGridView1.Location = new System.Drawing.Point(0, 28);
             this.radGridView1.Margin = new System.Windows.Forms.Padding(4);
             // 
             // 
@@ -120,7 +121,7 @@
             this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.radGridView1.Name = "radGridView1";
             this.radGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.radGridView1.Size = new System.Drawing.Size(592, 307);
+            this.radGridView1.Size = new System.Drawing.Size(592, 340);
             this.radGridView1.TabIndex = 2;
             // 
             // santierDataSetBindingSource
@@ -142,16 +143,15 @@
             this.radDateTimePicker1.CalendarSize = new System.Drawing.Size(290, 320);
             this.radDateTimePicker1.Culture = new System.Globalization.CultureInfo("en-RO");
             this.radDateTimePicker1.CustomFormat = "MMMM yyyy";
-            this.radDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.radDateTimePicker1.Location = new System.Drawing.Point(13, 13);
+            this.radDateTimePicker1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.radDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.radDateTimePicker1.Location = new System.Drawing.Point(0, 0);
             this.radDateTimePicker1.Name = "radDateTimePicker1";
-            this.radDateTimePicker1.Size = new System.Drawing.Size(205, 28);
+            this.radDateTimePicker1.Size = new System.Drawing.Size(592, 28);
             this.radDateTimePicker1.TabIndex = 3;
             this.radDateTimePicker1.TabStop = false;
-            this.radDateTimePicker1.Text = "December 2021";
+            this.radDateTimePicker1.Text = "12/2/2021";
             this.radDateTimePicker1.Value = new System.DateTime(2021, 12, 2, 16, 37, 28, 514);
-            //this.radDateTimePicker1.DateTimePickerElement.Calendar.HeaderNavigationMode = Telerik.WinControls.UI.HeaderNavigationMode.Zoom;
-            //this.radDateTimePicker1.DateTimePickerElement.Calendar.ZoomLevel = Telerik.WinControls.UI.ZoomLevel.Months;
             // 
             // PlatiControl
             // 
@@ -159,8 +159,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(592, 404);
-            this.Controls.Add(this.radDateTimePicker1);
             this.Controls.Add(this.radGridView1);
+            this.Controls.Add(this.radDateTimePicker1);
             this.Controls.Add(this.radButton1);
             this.Name = "PlatiControl";
             // 

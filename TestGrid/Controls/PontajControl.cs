@@ -17,6 +17,45 @@ namespace TestGrid.Controls
             InitializeComponent();
             radDateTimePicker1.DateTimePickerElement.Calendar.HeaderNavigationMode = Telerik.WinControls.UI.HeaderNavigationMode.Zoom;
             radDateTimePicker1.DateTimePickerElement.Calendar.ZoomLevel = Telerik.WinControls.UI.ZoomLevel.Months;
+            radDateTimePicker1.DateTimePickerElement.Calendar.ZoomChanging += Calendar_ZoomChanging;
+
+            radDateTimePicker1.DateTimePickerElement.Calendar.SelectionChanged += Calendar_SelectionChanged;
+
+            var calendar = radDateTimePicker1.DateTimePickerElement.Calendar;
+            var dateSelected = calendar.FocusedDate;
+            var month = dateSelected.Month;
+            var year = dateSelected.Year;
+
+            for (int i = 1; i <= calendar.CurrentCalendar.GetDaysInMonth(year, month); i++)
+            {
+                radGridView1.Columns.Add(String.Format("{0}/{1}/{2}", i.ToString(), month.ToString(), year.ToString()));
+            }
+        }
+
+        private void Calendar_SelectionChanged(object sender, EventArgs e)
+        {
+            var calendar = radDateTimePicker1.DateTimePickerElement.Calendar;
+            var dateSelected = calendar.SelectedDate;
+            var month = dateSelected.Month;
+            var year = dateSelected.Year;
+
+            int colCnt = radGridView1.Columns.Count;
+            if (colCnt > 2)
+            {
+                for (int i = colCnt - 1; i > 1; i--)
+                {
+                    radGridView1.Columns.RemoveAt(i);
+                }
+            }
+            for (int i = 1; i <= calendar.CurrentCalendar.GetDaysInMonth(year, month); i++)
+            {
+                radGridView1.Columns.Add(String.Format("{0}/{1}/{2}", i.ToString(), month.ToString(), year.ToString()));
+            }
+        }
+
+        private void Calendar_ZoomChanging(object sender, CalendarZoomChangingEventArgs e)
+        {
+            e.Cancel = true;
         }
 
         private void RadForm1_Load(object sender, EventArgs e)
