@@ -54,6 +54,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Telerik.WinControls.GridView, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.RadDock, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.UI, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
       <HintPath>..\lib\RCWF\2021.2.615.40.Trial\Telerik.WinControls.UI.dll</HintPath>
       <Private>True</Private>
@@ -98,11 +99,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>santierDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="santierDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>santierDataSet1.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Controls\PontajControl.resx">
       <DependentUpon>PontajControl.cs</DependentUpon>
@@ -151,17 +147,6 @@
     </None>
     <None Include="santierDataSet.xss">
       <DependentUpon>santierDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="santierDataSet1.xsc">
-      <DependentUpon>santierDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="santierDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>santierDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="santierDataSet1.xss">
-      <DependentUpon>santierDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

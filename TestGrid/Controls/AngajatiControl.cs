@@ -20,8 +20,9 @@ namespace TestGrid
 
         private void RadForm1_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'santierDataSet1.employees' table. You can move, or remove it, as needed.
-            this.employeesTableAdapter.Fill(this.santierDataSet1.employees);
+            // TODO: This line of code loads data into the 'santierDataSet.employees' table. You can move, or remove it, as needed.
+            this.employeesTableAdapter.Fill(this.santierDataSet.employees);
+
             //this.radGridView1.AutoSizeColumnsMode = GridViewAutoSizeColumnsMode.Fill;
             //this.radGridView1.Columns["FirstName"].Width = 100;
             //this.radGridView1.Columns["LastName"].Width = 100;
@@ -33,7 +34,7 @@ namespace TestGrid
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            this.employeesTableAdapter.Update(this.santierDataSet1.employees);
+            this.employeesTableAdapter.Update(this.santierDataSet.employees);
         }
     }
 }

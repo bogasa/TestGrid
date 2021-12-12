@@ -28,7 +28,8 @@ namespace TestGrid.Controls
 
             for (int i = 1; i <= calendar.CurrentCalendar.GetDaysInMonth(year, month); i++)
             {
-                radGridView1.Columns.Add(String.Format("{0}/{1}/{2}", i.ToString(), month.ToString(), year.ToString()));
+                radGridView1.Columns.Add(String.Format("{0}/{1}", i.ToString(), month.ToString()));
+                radGridView1.Columns[i].Width = 40;
             }
         }
 
@@ -42,14 +43,15 @@ namespace TestGrid.Controls
             int colCnt = radGridView1.Columns.Count;
             if (colCnt > 2)
             {
-                for (int i = colCnt - 1; i > 1; i--)
+                for (int i = colCnt - 1; i > 3; i--)
                 {
                     radGridView1.Columns.RemoveAt(i);
                 }
             }
             for (int i = 1; i <= calendar.CurrentCalendar.GetDaysInMonth(year, month); i++)
             {
-                radGridView1.Columns.Add(String.Format("{0}/{1}/{2}", i.ToString(), month.ToString(), year.ToString()));
+                radGridView1.Columns.Add(String.Format("{0}/{1}", i.ToString(), month.ToString()));
+                radGridView1.Columns[i].MinWidth = 40;
             }
         }
 
@@ -60,14 +62,14 @@ namespace TestGrid.Controls
 
         private void PlatiControl_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'santierDataSet.employees' table. You can move, or remove it, as needed.
-            this.paymentsTableAdapter1.Fill(this.santierDataSet.Payments);
+            // TODO: This line of code loads data into the 'santierDataSet.payments' table. You can move, or remove it, as needed.
+            this.paymentsTableAdapter.Fill(this.santierDataSet.payments);
 
         }
 
         private void radButton1_Click(object sender, EventArgs e)
         {
-            this.paymentsTableAdapter1.Update(this.santierDataSet.Payments);
+            this.paymentsTableAdapter.Update(this.santierDataSet.payments);
         }
 
     }

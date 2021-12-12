@@ -21,6 +21,7 @@ namespace TestGrid.Controls
 
             radDateTimePicker1.DateTimePickerElement.Calendar.SelectionChanged += Calendar_SelectionChanged;
 
+
             var calendar = radDateTimePicker1.DateTimePickerElement.Calendar;
             var dateSelected = calendar.FocusedDate;
             var month = dateSelected.Month;
@@ -28,7 +29,8 @@ namespace TestGrid.Controls
 
             for (int i = 1; i <= calendar.CurrentCalendar.GetDaysInMonth(year, month); i++)
             {
-                radGridView1.Columns.Add(String.Format("{0}/{1}/{2}", i.ToString(), month.ToString(), year.ToString()));
+                radGridView1.Columns.Add(String.Format("{0}/{1}", i.ToString(), month.ToString()));
+                radGridView1.Columns[i].Width = 40;
             }
         }
 
@@ -42,14 +44,15 @@ namespace TestGrid.Controls
             int colCnt = radGridView1.Columns.Count;
             if (colCnt > 2)
             {
-                for (int i = colCnt - 1; i > 1; i--)
+                for (int i = colCnt - 1; i > 4; i--)
                 {
                     radGridView1.Columns.RemoveAt(i);
                 }
             }
             for (int i = 1; i <= calendar.CurrentCalendar.GetDaysInMonth(year, month); i++)
             {
-                radGridView1.Columns.Add(String.Format("{0}/{1}/{2}", i.ToString(), month.ToString(), year.ToString()));
+                radGridView1.Columns.Add(String.Format("{0}/{1}", i.ToString(), month.ToString()));
+                radGridView1.Columns[i].Width = 40;
             }
         }
 
