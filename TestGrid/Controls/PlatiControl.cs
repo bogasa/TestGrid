@@ -7,13 +7,21 @@ using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
 using Telerik.WinControls.UI;
+using System.Data.SqlClient;
 
 namespace TestGrid.Controls
 {
     public partial class PlatiControl : Telerik.WinControls.UI.RadForm
     {
+        private SqlConnection sqlConn;
+        private SqlDataAdapter dbDataAdapter;
+        private DataTable dtPlati;
         public PlatiControl()
         {
+            sqlConn = new SqlConnection(Properties.Settings.Default.santierConnectionString);
+            dbDataAdapter = new SqlDataAdapter("SELECT t.EmployeeId, e.FirstName, e.LastName AS Employee FROM employees e LEFT JOIN timesheets t on t.EmployeeId = e.EmployeeId", sqlConn);
+            dtPlati = new DataTable();
+
             InitializeComponent();
             radDateTimePicker1.DateTimePickerElement.Calendar.HeaderNavigationMode = Telerik.WinControls.UI.HeaderNavigationMode.Zoom;
             radDateTimePicker1.DateTimePickerElement.Calendar.ZoomLevel = Telerik.WinControls.UI.ZoomLevel.Months;
@@ -25,6 +33,9 @@ namespace TestGrid.Controls
             var dateSelected = calendar.FocusedDate;
             var month = dateSelected.Month;
             var year = dateSelected.Year;
+
+            dbDataAdapter.Fill(dtPlati);
+            radGridView1.DataSource = dtPlati;
 
             for (int i = 1; i <= calendar.CurrentCalendar.GetDaysInMonth(year, month); i++)
             {
@@ -51,7 +62,7 @@ namespace TestGrid.Controls
             for (int i = 1; i <= calendar.CurrentCalendar.GetDaysInMonth(year, month); i++)
             {
                 radGridView1.Columns.Add(String.Format("{0}/{1}", i.ToString(), month.ToString()));
-                radGridView1.Columns[i].MinWidth = 40;
+                radGridView1.Columns[i].Width = 40;
             }
         }
 
@@ -64,6 +75,7 @@ namespace TestGrid.Controls
         {
             // TODO: This line of code loads data into the 'santierDataSet.payments' table. You can move, or remove it, as needed.
             this.paymentsTableAdapter.Fill(this.santierDataSet.payments);
+
 
         }
 
